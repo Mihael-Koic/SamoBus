@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>XcodeLocation</key>
+					<string>{"ExpandTranscript":true,"IndexPath":[1,0]}</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>payload</key>
+					<string>x-xcode-log://98F08B30-C812-4F16-96A2-1E80729C13D0</string>
+				</dict>
+				<key>scheme</key>
+				<string>x-xcode-log</string>
+				<key>type</key>
+				<string>IDELogDocumentLocation</string>
+			</dict>
+			<key>is-complete</key>
+			<true/>
+			<key>title</key>
+			<string>Error: Cycle in dependencies between targets 'SamoBus' and 'SamoBusTests'; building could produce unreliable results.
+Cycle path: SamoBus → SamoBusTests → SamoBus
+Cycle details:
+→ Target 'SamoBus' has an explicit dependency on Target 'SamoBusTests'
+→ Target 'SamoBusTests' has an explicit dependency on Target 'SamoBus'
+
+
+Raw dependency cycle trace:
+
+target:  -&gt;
+
+node: &lt;all&gt; -&gt;
+
+command: &lt;all&gt; -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata -&gt;
+
+command: P0:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:ExtractAppIntentsMetadata -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/Objects-normal/arm64/Contacts.swiftconstvalues -&gt;
+
+command: P0:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:SwiftDriver Compilation SamoBus normal arm64 com.apple.xcode.tools.swift.compiler -&gt;
+
+CYCLE POINT -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/DerivedSources/GeneratedAssetSymbols.swift -&gt;
+
+command: P0:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:GenerateAssetSymbols /Users/mihaelkoic/Desktop/SamoBus/SamoBus/Preview Content/Preview Assets.xcassets /Users/mihaelkoic/Desktop/SamoBus/SamoBus/Assets.xcassets -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--ModuleVerifierTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--ModuleVerifierTaskProducer -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--ModuleMapTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--ModuleMapTaskProducer -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--HeadermapTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--HeadermapTaskProducer -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--RealityAssetsTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--RealityAssetsTaskProducer -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--GenerateAppPlaygroundAssetCatalogTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--GenerateAppPlaygroundAssetCatalogTaskProducer -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--GeneratedFilesTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--GeneratedFilesTaskProducer -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/SamoBus.app-Simulated.xcent -&gt;
+
+command: P0:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:ProcessProductPackaging  /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/SamoBus.app-Simulated.xcent -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--ProductStructureTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--ProductStructureTaskProducer -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--begin-compiling&gt; -&gt;
+
+command: P0:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--begin-compiling -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--modules-ready&gt; -&gt;
+
+command: P0:target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f-:Debug:Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--modules-ready -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBusTests.build/DerivedSources/SamoBusTests-Swift.h -&gt;
+
+command: P2:target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f-:Debug:SwiftMergeGeneratedHeaders /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBusTests.build/DerivedSources/SamoBusTests-Swift.h /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBusTests.build/Objects-normal/arm64/SamoBusTests-Swift.h -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBusTests.build/Objects-normal/arm64/SamoBusTests-Swift.h -&gt;
+
+command: P2:target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f-:Debug:SwiftDriver Compilation Requirements SamoBusTests normal arm64 com.apple.xcode.tools.swift.compiler -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--ModuleVerifierTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--ModuleVerifierTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--ModuleMapTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--ModuleMapTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--HeadermapTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--HeadermapTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--RealityAssetsTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--RealityAssetsTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--GenerateAppPlaygroundAssetCatalogTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--GenerateAppPlaygroundAssetCatalogTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--GeneratedFilesTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--GeneratedFilesTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--ProductStructureTaskProducer&gt; -&gt;
+
+command: P0:::Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--ProductStructureTaskProducer -&gt;
+
+node: &lt;target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--begin-compiling&gt; -&gt;
+
+command: P0:target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f-:Debug:Gate target-SamoBusTests-3f352fccbb6b5f06fb4c59bb490b9bb1f28b15485cc74c8cfc5b38baf6f5701f--begin-compiling -&gt;
+
+node: &lt;target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--modules-ready&gt; -&gt;
+
+command: P0:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:Gate target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967--modules-ready -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/DerivedSources/SamoBus-Swift.h -&gt;
+
+command: P2:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:SwiftMergeGeneratedHeaders /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/DerivedSources/SamoBus-Swift.h /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/Objects-normal/arm64/SamoBus-Swift.h -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/Objects-normal/arm64/SamoBus-Swift.h -&gt;
+
+command: P2:target-SamoBus-3f352fccbb6b5f06fb4c59bb490b9bb1ce9c79a52694532e788b68ee24c4d967-:Debug:SwiftDriver Compilation Requirements SamoBus normal arm64 com.apple.xcode.tools.swift.compiler -&gt;
+
+node: /Users/mihaelkoic/Library/Developer/Xcode/DerivedData/SamoBus-ealdvnrvugdqvlfhnpjhoiksqtgc/Build/Intermediates.noindex/SamoBus.build/Debug-iphonesimulator/SamoBus.build/DerivedSources/GeneratedAssetSymbols.swift</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>payload</key>
+					<string>x-xcode-log://98F08B30-C812-4F16-96A2-1E80729C13D0</string>
+				</dict>
+				<key>scheme</key>
+				<string>x-xcode-log</string>
+				<key>type</key>
+				<string>DVTDocumentLocation</string>
+			</dict>
+			<key>is-complete</key>
+			<true/>
+			<key>title</key>
+			<string>Bookmark “Build (Automatic) SamoBus - Log”</string>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>
