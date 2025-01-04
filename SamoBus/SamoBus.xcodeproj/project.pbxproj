@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD478DC22D1D48CC00A70534 /* WishKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD478DC12D1D48CC00A70534 /* WishKit */; };
+		FD81931F2D28355800A1394A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = FD81931E2D28355800A1394A /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD81931F2D28355800A1394A /* GoogleMobileAds in Frameworks */,
 				FD478DC22D1D48CC00A70534 /* WishKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD81931D2D28355800A1394A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDEE7CCA2D1AB25A0033329F = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +108,7 @@
 				FDA2DE422D20816700FBEBC4 /* SamoBus.app */,
 				FDA2DE432D20816700FBEBC4 /* SamoBusTests.xctest */,
 				FDA2DE442D20816700FBEBC4 /* SamoBusUITests.xctest */,
+				FD81931D2D28355800A1394A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +133,7 @@
 			name = SamoBus;
 			packageProductDependencies = (
 				FD478DC12D1D48CC00A70534 /* WishKit */,
+				FD81931E2D28355800A1394A /* GoogleMobileAds */,
 			);
 			productName = SamoBus;
 			productReference = FDA2DE422D20816700FBEBC4 /* SamoBus.app */;
@@ -205,6 +216,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				FD9411592D1ABFCD003D5BC5 /* XCRemoteSwiftPackageReference "wishkit-ios" */,
+				FD81931C2D28350C00A1394A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FDEE7CCA2D1AB25A0033329F;
@@ -587,6 +599,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FD81931C2D28350C00A1394A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
 		FD9411592D1ABFCD003D5BC5 /* XCRemoteSwiftPackageReference "wishkit-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wishkit/wishkit-ios.git";
@@ -602,6 +622,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FD9411592D1ABFCD003D5BC5 /* XCRemoteSwiftPackageReference "wishkit-ios" */;
 			productName = WishKit;
+		};
+		FD81931E2D28355800A1394A /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD81931C2D28350C00A1394A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,6 +1,24 @@
 {
-  "originHash" : "264e133f89de8424962f607e4973841bb99b4aeb3c95666c132205f0a27d7097",
+  "originHash" : "1a29855ea509aaf0d402bbb3b19226d7f9d90e8af2088a15bc09adc9b1a5cf25",
   "pins" : [
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "7778cc1ab037c10dbbe026959e51e616bd961be9",
+        "version" : "11.13.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "708a282840c2171ee63bd93b87afa49fe507d70e",
+        "version" : "2.7.0"
+      }
+    },
     {
       "identity" : "wishkit-ios",
       "kind" : "remoteSourceControl",

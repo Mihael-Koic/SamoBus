@@ -32,7 +32,7 @@ struct OnboardingPage5: View {
                 hasSeenOnboarding = true
                 dismiss() // Zatvara sheet
             }) {
-                Text("Spremni za početak?")
+                Text("Spremni za početak? 🤔")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()

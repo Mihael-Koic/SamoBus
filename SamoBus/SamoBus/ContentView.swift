@@ -25,7 +25,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationStack {
+        NavigationView  {
             TabView {
                 Home()
                     .tabItem {
@@ -49,7 +49,7 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "gearshape")
                         Text("Settings")
-                    }
+                }
             }
         }
         .accentColor(Color.orange)

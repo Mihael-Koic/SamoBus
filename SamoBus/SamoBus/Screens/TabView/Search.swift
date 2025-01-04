@@ -7,8 +7,10 @@
 
 
 import SwiftUI
+import GoogleMobileAds
 
 struct Search: View {
+    @State private var refreshTrigger = false
     @State private var searchText = "" // Za pohranu unesenog teksta
     @State private var filteredBuses = [String]() // Za pohranu filtriranih linija
 
@@ -60,41 +62,89 @@ struct Search: View {
             return AnyView(Samobor_Rude_Braslovlje()) // Zamijeni s tvojim specifičnim view
         
         case "144 Samobor–Smerovišće–Lipovec":
-            return AnyView(Samobor_Smerovis_c_e_Lipovec()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Smerovis_c_e_Lipovec())
         
         case "147 Samobor–Bregana":
-            return AnyView(Samobor_Bregana()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Bregana())
             
         case "150 Samobor–Grdanjci":
-            return AnyView(Samobor___Grdanjci()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor___Grdanjci())
             
         case "153 Samobor–Sv.Nedelja–Ljublja...":
-            return AnyView(Samobor_Sv_Nedelja_Ljublja()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Sv_Nedelja_Ljublja())
             
         case "155 Samobor–Kerestinec–Zagreb...":
-            return AnyView(Samobor_Kerestinec_Zagreb()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Kerestinec_Zagreb())
             
         case "155 Samobor–Rakitje–AK Zagreb":
-            return AnyView(Samobor_Rakitje_AK_Zagreb()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Rakitje_AK_Zagreb())
             
         case "511 Samobor–Rakov Potok–Jagn...":
-            return AnyView(Samobor_Rakov_Potok_Jagn()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Rakov_Potok_Jagn())
         
         case "513 Samobor–Jastrebarsko":
-            return AnyView(Samobor_Jastrebarsko()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Jastrebarsko())
             
         case "Samobor–Galgovo– Klinča Sela":
-            return AnyView(Samobor_Galgovo_Klinc_a_Sela()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Galgovo_Klinc_a_Sela())
 
         case "518 Samobor–Sv.Nedelja–Stupnik":
-            return AnyView(Samobor_Sv_Nedelja_Stupnik()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Sv_Nedelja_Stupnik())
             
         case "517 Samobor–Galgovo– Klinča Sela":
-            return AnyView(Samobor_Galgovo_Klinc_a_Sela()) // Zamijeni s tvojim specifičnim view
+            return AnyView(Samobor_Galgovo_Klinc_a_Sela())
             
         // Grad Samobor
         case "S1 Ak Samobor-Kol. Naselje":
-            return AnyView(S1_Ak_Samobor_Kol__Naselje()) // Zamijeni s tvojim specifičnim view
+            return AnyView(S1_Ak_Samobor_Kol__Naselje())
+            
+        case "S2 Samobor AK – Bregana":
+            return AnyView(Samobor_AK_Bregana())
+            
+        case "S3 Samobor AK – Mali Lipovec":
+            return AnyView(Samobor_AK_Mali__Lipovec())
+            
+        case "S4 Samobor AK – Galgovo":
+            return AnyView(Samobor_AK_Galgovo())
+            
+        case "S5 Samobor AK - Medsave":
+            return AnyView(Samobor_AK___Medsave())
+            
+        case "S6 Samobor AK - Braslovje":
+            return AnyView(Samobor_AK___Braslovje())
+            
+        case "S7 Samobor AK - Domaslovec":
+            return AnyView(Samobor_AK___Domaslovec())
+            
+        case "S8 Samobor AK - Bukovje":
+            return AnyView(Samobor_AK___Bukovje())
+            
+        case "S9 Terihaji - Molvice":
+            return AnyView(Terihaji___Molvice())
+            
+        case "S10 Molvice - Sv.Martin pod Oki...":
+            return AnyView(Molvice___Sv_Martin_pod_Oki())
+            
+        case "S11 Pavučnjak - Sv.Martin pod Oki...":
+            return AnyView(Pavuc_njak___Sv_Martin_pod_Oki())
+            
+        case "S12 Bregana - Mala Jazbina":
+            return AnyView(Bregana___Mala_Jazbina())
+            
+        case "S13 Samobor AK - Grdanjci":
+            return AnyView(Samobor_AK___Grdanjci())
+            
+        case "S14 Grdanjci – Gornja Vas":
+            return AnyView(Grdanjci___Gornja_Vas())
+            
+        case "S15 Grdanjci – Jarušje":
+            return AnyView(Grdanjci___Jarus_je())
+            
+        case "S16 Samobor AK – Vrhovčak":
+            return AnyView(Samobor_AK___Vrhovc_ak())
+            
+        case "S17 Samobor AK – Slani Dol":
+            return AnyView(Samobor_AK___Slani_Dol())
 
         
 
@@ -131,6 +181,17 @@ struct Search: View {
                 filteredBuses = allBuses
             }
             .navigationTitle("Search")
+            
+            // Prikaz banner oglasa s automatskim osvježavanjem
+            BannerAdView(adUnitID: "ca-app-pub-6009329907129711/5618221439", refreshTrigger: $refreshTrigger)
+                    .frame(width: 320, height: 50)
+                    
+                    .onAppear {
+                // Pokreće timer za osvježavanje bannera
+                Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+                    refreshTrigger.toggle()
+                }
+            }
         }
     }
 }

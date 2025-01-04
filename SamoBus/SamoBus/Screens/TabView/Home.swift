@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 struct Home: View {
+    @State private var refreshTrigger = false
     var body: some View {
         NavigationStack {
             Form {
@@ -223,6 +225,17 @@ struct Home: View {
                 }
             }
             .navigationTitle(Text("Timetable"))
+            
+            // Prikaz banner oglasa s automatskim osvježavanjem
+            BannerAdView(adUnitID: "ca-app-pub-6009329907129711/5618221439", refreshTrigger: $refreshTrigger)
+                    .frame(width: 320, height: 50)
+                    
+                    .onAppear {
+                // Pokreće timer za osvježavanje bannera
+                Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { _ in
+                    refreshTrigger.toggle()
+                }
+            }
         }
     }
 }

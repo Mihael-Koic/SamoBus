@@ -1,6 +1,7 @@
 import SwiftUI
 import UserNotifications
 import WishKit
+import GoogleMobileAds
 
 @main
 struct SamoBusApp: App {
@@ -11,6 +12,7 @@ struct SamoBusApp: App {
 
     init() {
         WishKit.configure(with: "C8D42948-0259-4309-97C3-DC7345D77968")
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
 
     var body: some Scene {

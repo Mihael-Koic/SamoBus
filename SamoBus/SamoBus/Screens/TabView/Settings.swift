@@ -72,6 +72,7 @@ struct Settings: View {
                         .padding(.top, 499)
                 }
             }
+            
         }
 
         // Sheet za WishKit
